@@ -48,6 +48,7 @@ console.log(square1(2));
 
 // Arrow Function
 // functions likhne ka short syntax hain
+// arrow function hoist ko supprt nhi krty
 
 const square2 = (number) => {
   return number * number;
@@ -76,3 +77,45 @@ let test = (x) => x.fname + " " + x.lname;
 let a = ary.map(test);
 
 console.log(a);
+
+const add = (a, b) => a + b;
+
+console.log(add(4, 2));
+
+// Using Conditions in Arrow Function
+// If you want to use conditions, you must use curly braces and return.
+
+const add2 = (a, b) => {
+  if (typeof a === "number" && typeof b === "number") {
+    return a + b;
+  } else {
+    return "Enter a valid number";
+  }
+};
+
+console.log(add2(6, "xcv"));
+
+// Returning Object from Arrow Function
+// You must wrap the object in parentheses.
+
+const user = () => ({ name: "Hashir Dilmurad Zai" });
+
+console.log(user());
+
+// Arguments Keyword
+// Works in normal functions
+// Does NOT work in arrow functions
+
+// const getAll = () => {
+//   console.log(arguments); // Error
+// };
+
+// getAll("Apple", "Grapes", "Banana");
+
+// Normal function:Computer Science
+
+function getAll2() {
+  console.log(arguments);
+}
+
+getAll2("Apple", "Grapes", "Banana");
