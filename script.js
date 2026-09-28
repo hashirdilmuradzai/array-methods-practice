@@ -1,4 +1,5 @@
 // https://chatgpt.com/share/6ab40436-21b0-83ee-b78b-e63f2815966d
+// https://chatgpt.com/share/6ab681af-5590-83ee-bf42-26e4d75b420b
 
 // for...of → values ke liye loop
 // forEach  → array ki har value par kaam
@@ -16,7 +17,7 @@ name.forEach((value, index) => console.log(index + " : " + value));
 // 1.b isma break and continue
 // 2.
 
-const fruits = ["apple", "banana", "mango", "kiwi", "pineapple"];
+const fruits = ["apple", "banana", "mango", "kiwi", "pineapple", "avacado"];
 
 fruits.map(function (a) {
   console.log(a);
@@ -119,3 +120,43 @@ function getAll2() {
 }
 
 getAll2("Apple", "Grapes", "Banana");
+
+//  filter()
+// filter() bhi array method hai. Iska kaam hai:
+// Array mein se woh values nikalna jo tumhari condition ko true karti hain, aur ek NEW array banana.
+// filter() mein return important hai
+
+const result4 = fruits.filter((fruit) => fruit[0] === "a");
+
+console.log(result4);
+
+const result5 = fruits.filter((fruit) => {
+  let pehlaCharacter = fruit[0];
+
+  return fruit[0] === "a";
+});
+
+console.log(result5);
+
+const ages = [10, 19, 18, 16, 20];
+
+let result6 = ages.filter((age) => age >= 18);
+
+console.log(result6);
+
+// Array of Objects
+
+// find()
+
+const students = [
+  { name: "Ali", marks: 80 },
+  { name: "Ahmed", marks: 40 },
+  { name: "Sara", marks: 75 },
+  { name: "Usman", marks: 30 },
+  { name: "Shehzad", marks: 99 },
+  { name: "Asim", marks: 10 },
+];
+
+const result7 = students.find((student) => student.marks < 50);
+
+console.log(result7);
