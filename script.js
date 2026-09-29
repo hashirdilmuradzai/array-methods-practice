@@ -145,8 +145,8 @@ let result6 = ages.filter((age) => age >= 18);
 console.log(result6);
 
 // Array of Objects
-
 // find()
+// Condition ko satisfy karne wali pehli value return karta hai.
 
 const students = [
   { name: "Ali", marks: 80 },
@@ -157,6 +157,84 @@ const students = [
   { name: "Asim", marks: 10 },
 ];
 
-const result7 = students.find((student) => student.marks < 50);
+// const result7 = students.find((student) => student.marks < 50);
 
-console.log(result7);
+// console.log(result7);
+
+const result8 = [];
+
+for (let i = 0; i < students.length; i++) {
+  if (students[i].marks > 50) {
+    result8.push(students[i]);
+  }
+}
+
+console.log(result8);
+
+// some()
+// Checks whether at least one element passes the condition.
+// Returns: true / false
+
+// Example
+
+const marks = [30, 40, 85, 50];
+
+const result9 = marks.some((mark) => mark >= 50);
+
+console.log(result9);
+
+// Real-world example
+
+const products = [
+  { name: "Laptop", inStock: false },
+  { name: "Mouse", inStock: true },
+  { name: "Keyboard", inStock: false },
+];
+
+const result10 = products.some((products) => products.inStock);
+
+console.log(result10);
+
+// every()
+// Checks whether all elements pass the condition.
+// Sary True to true aaega
+
+// Example
+
+const marks2 = [90, 78, 65, 56, 50];
+
+const result11 = marks2.every((mark) => mark >= 50);
+
+console.log(result11);
+
+// Real-world example
+
+const formFields = ["Hashir", "hashirdilmuradzai@gmail.com", "Karachi"];
+
+const result12 = formFields.every((formField) => formField !== "");
+
+console.log(result12);
+
+// some()
+// Checks whether at least one element passes the condition.
+// koe aik bhi true to true
+
+// Example
+
+const marks3 = [40, 36, 49, 50];
+
+const result13 = marks3.some((mark) => mark >= 50);
+
+console.log(result13);
+
+// Real-world example
+
+const products2 = [
+  { name: "Laptop", inStock: false },
+  { name: "Mouse", inStock: true },
+  { name: "Keyboard", inStock: false },
+];
+
+const result14 = products2.some((product) => product.inStock);
+
+console.log(result14);
